@@ -8,7 +8,7 @@ using Android.OS;
 
 namespace Gevlee.Updt.App.Droid
 {
-    [Activity(Label = "Gevlee.Updt.App.Droid", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "Updt", MainLauncher = true, Icon = "@drawable/icon", Theme = "@style/AppTheme")]
     public class MainActivity : Activity
     {
         int count = 1;
