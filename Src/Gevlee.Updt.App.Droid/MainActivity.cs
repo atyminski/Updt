@@ -5,10 +5,11 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using com.refractored.fab;
 
 namespace Gevlee.Updt.App.Droid
 {
-    [Activity(Label = "Updt", MainLauncher = true, Icon = "@drawable/icon", Theme = "@style/AppTheme")]
+    [Activity(Label = "Updt", MainLauncher = true, Icon = "@drawable/ic_launcher", Theme = "@style/AppTheme")]
     public class MainActivity : Activity
     {
         int count = 1;
@@ -20,11 +21,11 @@ namespace Gevlee.Updt.App.Droid
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
 
-            // Get our button from the layout resource,
-            // and attach an event to it
-            Button button = FindViewById<Button>(Resource.Id.MyButton);
 
-            button.Click += delegate { button.Text = string.Format("{0} clicks!", count++); };
+            var listView = FindViewById<ListView>(Resource.Id.list);
+            var fab = FindViewById<FloatingActionButton>(Resource.Id.fab);
+
+            //button.Click += delegate { button.Text = string.Format("{0} clicks!", count++); };
         }
     }
 }
